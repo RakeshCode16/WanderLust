@@ -33,6 +33,7 @@ body {
 
 .f-info-links a:hover{
     text-decoration: underline;
+    color: blue;
 }
 
 .f-info-links,
@@ -71,7 +72,14 @@ body {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
-    
+    }
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+ font-weight: 400 !important;   
 }
 
 .listing-link{
@@ -107,4 +115,9 @@ body {
 
 .btns {
     display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
 }

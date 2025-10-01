@@ -1,5 +1,5 @@
-const Listing = require("./models/listing");
-const Review = require("./models/reviews.js");
+const Listing = require("./models/listing.js");
+const Review = require("./models/review.js");
 const ExpressError = require("./utils/ExpressError.js"); 
 const {listingSchema, reviewSchema } = require("./schema.js");   
 
@@ -24,7 +24,7 @@ module.exports.isOwner = async (req, res, next) =>{
     let listing = await Listing.findById(id);
     if(!listing.owner.equals(res.locals.currUser._id)){
         req.flash("error", "You don't have permission to edit this listing!");
-        return res.redirect(`/listings/${id}`);
+        return res.redirect(`/listing/${id}`);
     }
     next();
 };
@@ -54,7 +54,7 @@ module.exports.isReviewAuthor = async (req, res, next) =>{
     let review = await Review.findById(reviewId);
     if(!review.author.equals(res.locals.currUser._id)){
         req.flash("error", "You don't have permission to delete this review!");
-        return res.redirect(`/listings/${id}`);
+        return res.redirect(`/listing/${id}`);
     }   
     next();
 };
