@@ -58,7 +58,6 @@ cookie-parser
 
 
 ## 👩‍💻 Author
-Khushi Gupta
-B.Tech Student | Full Stack Developer
+Rakesh Kumar
+BCA Student | Full Stack Developer
 
-“Dream big, build clean.”
